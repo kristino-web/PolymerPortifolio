@@ -1,0 +1,80 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-view1">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+       .cafe-header { @apply(--paper-font-headline); }
+       .cafe-light { color: var(--paper-grey-600); }
+       .cafe-location {
+          float: right;
+          font-size: 15px;
+          vertical-align: middle;
+        }
+        .cafe-reserve { color: var(--google-blue-500); }
+        iron-icon.star {
+          --iron-icon-width: 16px;
+          --iron-icon-height: 16px;
+          color: var(--paper-amber-500);
+        }
+        iron-icon.star:last-of-type { color: var(--paper-grey-500); }
+
+    </style>
+
+    <div class="card">
+      <h1>QUEM SOU</h1>
+      
+      <paper-card image="http://lorempixel.com/400/200/sports/">
+        <div class="card-content">
+          <div class="cafe-header">Cafe Basilico
+            <div class="cafe-location cafe-light">
+              <iron-icon icon="communication:location-on"></iron-icon>
+              <span>250ft</span>
+            </div>
+          </div>
+          <div class="cafe-rating">
+            <iron-icon class="star" icon="star"></iron-icon>
+            <iron-icon class="star" icon="star"></iron-icon>
+            <iron-icon class="star" icon="star"></iron-icon>
+            <iron-icon class="star" icon="star"></iron-icon>
+            <iron-icon class="star" icon="star"></iron-icon>
+          </div>
+          <p>$・Italian, Cafe</p>
+          <p class="cafe-light">Small plates, salads &amp; sandwiches in an intimate setting.</p>
+        </div>
+        
+      </paper-card>
+   <!--    <paper-icon-button icon="delete"></paper-icon-button>
+      <paper-icon-button icon="search"></paper-icon-button>
+      <paper-icon-button icon="close"></paper-icon-button>
+
+      <paper-icon-button icon="favorite"></paper-icon-button>
+      <paper-icon-button icon="menu"></paper-icon-button>
+      <paper-icon-button icon="star"></paper-icon-button>
+
+      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
+      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p> -->
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-view1',
+    });
+  </script>
+</dom-module>
