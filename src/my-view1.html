@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-view1">
@@ -33,43 +34,43 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           color: var(--paper-amber-500);
         }
         iron-icon.star:last-of-type { color: var(--paper-grey-500); }
+        .header_name{
+          padding: 16px;
+          font-size: 24px;
+          font-weight: 400;
+          color: #000;
+        }
+        .body_content{
+          padding: 16px;
+        }
+        hr.style4 {
+          border: 0;
+          height: 1px;
+          background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(244, 102, 66), rgba(0, 0, 0, 0));
+
+          }
 
     </style>
 
-    <div class="card">
-      <h1>QUEM SOU</h1>
-      
-      <paper-card image="http://lorempixel.com/400/200/sports/">
-        <div class="card-content">
-          <div class="cafe-header">Cafe Basilico
-            <div class="cafe-location cafe-light">
-              <iron-icon icon="communication:location-on"></iron-icon>
-              <span>250ft</span>
-            </div>
-          </div>
-          <div class="cafe-rating">
-            <iron-icon class="star" icon="star"></iron-icon>
-            <iron-icon class="star" icon="star"></iron-icon>
-            <iron-icon class="star" icon="star"></iron-icon>
-            <iron-icon class="star" icon="star"></iron-icon>
-            <iron-icon class="star" icon="star"></iron-icon>
-          </div>
-          <p>$・Italian, Cafe</p>
-          <p class="cafe-light">Small plates, salads &amp; sandwiches in an intimate setting.</p>
-        </div>
+      <div class="card">
+        <h1 class="header_name">Albertino Carvalho</h1>
+        <p class="body_content">
+          Albertino Carvalho. Formado em Tecnologias de Sistemas para Internet, pela Universidade Adventista de São Paulo campus Engenheiro Coelho (UNASP-EC) em 2012, com 3 anos de experiencias profissional, grande parte em Desenvolvimento Web, casado com uma bela esposa, e ansioso pela chegada do nosso primeiro Bebé Melody.
+        </p>
+        <hr class="style4">
         
-      </paper-card>
-   <!--    <paper-icon-button icon="delete"></paper-icon-button>
-      <paper-icon-button icon="search"></paper-icon-button>
-      <paper-icon-button icon="close"></paper-icon-button>
-
-      <paper-icon-button icon="favorite"></paper-icon-button>
-      <paper-icon-button icon="menu"></paper-icon-button>
-      <paper-icon-button icon="star"></paper-icon-button>
-
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p> -->
-    </div>
+        <h1 class="header_name">Principais Actividades</h1>
+        <ul>
+          <li>Desenvolvimento Sites </li>
+          <li>Extratégia do Site / Aplicaçao /Análise Funcional </li>
+          <li>Montagem e suporte do DHTML / Responsivo </li>
+          <li>Criaçao do Design e interaçao do protótipo funcional </li>
+          <li>Monitoramento e Refinamento do CEO </li>
+          <li>Desenvolvimento de Aplicativos (Hibrido - Cordova)</li>
+          <li>Desenvolvimento de Sistemas desktops (SPA - Progressive Web App)</li>
+          <li>Documentação especifica e funcional </li>
+        </ul>
+      </div>
   </template>
 
   <script>

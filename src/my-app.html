@@ -24,9 +24,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../bower_components/iron-icons/communication-icons.html">
-<link rel="import" href="../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../bower_components/paper-styles/color.html">
 <link rel="import" href="../bower_components/paper-styles/typography.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
 <!-- end add by me -->
 
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
@@ -58,7 +61,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .drawer-list a {
         display: block;
-        padding: 0 16px;
+        padding: 0 16px 16px;
         text-decoration: none;
         color: var(--app-secondary-color);
         line-height: 40px;
@@ -68,6 +71,55 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: black;
         font-weight: bold;
       }
+      .paper-item-link {
+       color: inherit;
+       text-decoration: none;
+      }
+      .paper-icon-item{
+           width: 40px;
+      }
+      .nameT{
+        text-align: center;
+        font-weight: bold;
+      }
+      .emailT{
+        text-align: center;
+        color: grey;
+      }
+      
+      .ata{
+          position: relative;
+          border: 2px solid #00AA8D;
+          border-radius: 50%;
+          height: 120px;
+          padding: 2px;
+          width: 120px;
+          margin: 20px auto;
+      }
+
+      app-drawer {
+      --app-drawer-scrim-background: rgb(66, 193, 244);
+      --app-drawer-content-container: {
+        background-color: rgb(255, 255, 255);
+      }
+    }
+
+    hr.style4 {
+       border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 170, 141), rgba(0, 0, 0, 0));
+
+    }
+    app-header {
+      --app-header-shadow: {
+        box-shadow: inset 0px 5px 2px -3px rgba(0, 0, 0, 0.2);
+      };
+    }
+    iron-icon{
+          color: #00aa8d;
+    }
+          
+
     </style>
 
     <app-location route="{{route}}"></app-location>
@@ -81,25 +133,67 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <app-drawer-layout fullbleed>
       <!-- Drawer content -->
       <app-drawer id="drawer">
-        <app-toolbar>Menu</app-toolbar>
-        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="view1" href="/view1">
-          <iron-icon icon="icons:account-circle"></iron-icon>
-          QUEM SOU
+        <!-- <app-toolbar>Menu</app-toolbar> -->
+        <div id="contentContainer" class="style-scope app-header">
+          <div class="avatar-container style-scope ata">
+            <img src="https://avatars0.githubusercontent.com/u/2362037?v=3&s=460" alt=""
+            style="
+                background-size: contain;
+                width: 100%;
+                border-radius: 50%;
+                display: block;
+                margin: 0 auto;
+            ">
+          </div>
+          <div class="contact-info style-scope">
+            <div class="nameT style-scope">Albertino Carvalho</div>
+            <div class="emailT style-scope">tino477@gmail.com</div>
+          </div>
+        </div>
+
+        <hr class="style4">
+                
+        <div role="listbox">
+          <a class="paper-item-link" name="view1" href="/view1">
+            <paper-item>
+              <div class="paper-icon-item">
+                <iron-icon icon="icons:record-voice-over"></iron-icon> 
+              </div>
+                QUEM SOU
+            </paper-item>
           </a>
-          <a name="view2" href="/view2">
-          <iron-icon icon="icons:receipt"></iron-icon>
-          CURRÍCULO
+
+          <a class="paper-item-link" name="view2" href="/view2">
+            <paper-item>
+              <div class="paper-icon-item">
+                <iron-icon icon="icons:font-download"></iron-icon>
+              </div>
+                CURRÍCULO
+            </paper-item>
           </a>
-          <a name="view3" href="/view3">
-          <iron-icon icon="work"></iron-icon>
-          ÚLTIMOS PROJETOS
+
+          <a class="paper-item-link" name="view3" href="/view3">
+            <paper-item>
+              <div class="paper-icon-item">
+                <iron-icon icon="work"></iron-icon>
+              </div>
+                ÚLTIMOS PROJETOS
+            </paper-item>
           </a>
-          <a name="new-view" href="/new-view">
-          <iron-icon icon="communication:contact-phone"></iron-icon>
-          CONTATO
+
+          <a class="paper-item-link" name="new-view" href="/new-view">
+            <paper-item>
+              <div class="paper-icon-item">
+                <iron-icon icon="communication:call"></iron-icon>
+              </div>
+                CONTATO
+            </paper-item>
           </a>
-        </iron-selector>
+
+         
+        </div>
+        
+
       </app-drawer>
 
 
@@ -109,9 +203,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
             <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
-            <div main-title>PRESENTE</div>
-          
+            <div main-title>ALBERTINO'S PORTIFOLIUM</div>
+            <!-- <paper-icon-button icon="more-vert"></paper-icon-button> -->
+            <paper-icon-button icon="search"></paper-icon-button>
           </app-toolbar>
+          <!-- <app-toolbar></app-toolbar> -->
         </app-header>
 
         <iron-pages
@@ -126,6 +222,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <my-new-view name="new-view"></my-new-view>
         </iron-pages>
       </app-header-layout>
+
     </app-drawer-layout>
   </template>
 
