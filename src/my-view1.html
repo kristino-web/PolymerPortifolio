@@ -9,7 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
-
+<link rel="import" href="../bower_components/paper-chip/paper-chip.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-view1">
@@ -35,10 +35,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
         iron-icon.star:last-of-type { color: var(--paper-grey-500); }
         .header_name{
-          padding: 16px;
-          font-size: 24px;
-          font-weight: 400;
-          color: #000;
+            padding-left: 16px;
+            font-size: 24px;
+            font-weight: 400;
+            color: #000;
+            padding-top: 16px;
         }
         .body_content{
           padding: 16px;
@@ -46,30 +47,77 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         hr.style4 {
           border: 0;
           height: 1px;
-          background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(244, 102, 66), rgba(0, 0, 0, 0));
+          background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 170, 141), rgba(0, 0, 0, 0))
 
-          }
+        }
+        iron-icon{
+          color: #4285f4;
+          height: 46px;
+          width: 63px;
+          border: 1px solid;
+
+        }
+        .verde{
+              background-color: #00aa8d !important;
+        }
 
     </style>
 
       <div class="card">
+        <h1><iron-icon icon="icons:record-voice-over"></iron-icon> QUEM SOU</h1>
+        <paper-card alt="Emmental">
         <h1 class="header_name">Albertino Carvalho</h1>
-        <p class="body_content">
-          Albertino Carvalho. Formado em Tecnologias de Sistemas para Internet, pela Universidade Adventista de São Paulo campus Engenheiro Coelho (UNASP-EC) em 2012, com 3 anos de experiencias profissional, grande parte em Desenvolvimento Web, casado com uma bela esposa, e ansioso pela chegada do nosso primeiro Bebé Melody.
-        </p>
-        <hr class="style4">
-        
-        <h1 class="header_name">Principais Actividades</h1>
-        <ul>
-          <li>Desenvolvimento Sites </li>
-          <li>Extratégia do Site / Aplicaçao /Análise Funcional </li>
-          <li>Montagem e suporte do DHTML / Responsivo </li>
-          <li>Criaçao do Design e interaçao do protótipo funcional </li>
-          <li>Monitoramento e Refinamento do CEO </li>
-          <li>Desenvolvimento de Aplicativos (Hibrido - Cordova)</li>
-          <li>Desenvolvimento de Sistemas desktops (SPA - Progressive Web App)</li>
-          <li>Documentação especifica e funcional </li>
-        </ul>
+        <div class="card-content">
+          <p class="">
+            Albertino Carvalho. Formado em Tecnologias de Sistemas para Internet, pela Universidade Adventista de São Paulo campus Engenheiro Coelho (UNASP-EC) em 2012, com 3 anos de experiencias profissional, grande parte em Desenvolvimento Web, casado com uma bela esposa, e ansioso pela chegada do nosso primeiro Bebé Melody.
+          </p>
+        </div>
+       
+          <h1 class="header_name">Principais Actividades</h1>
+          <div class="card-content">
+
+            <paper-chip label="Desenvolvimento Sites / Sistemas" deletable>
+              <iron-icon class="icon verde" icon="icons:check"></iron-icon>
+            </paper-chip>
+
+            <paper-chip label="Extratégia do Site / Aplicaçao /Análise Funcional" deletable>
+              <iron-icon class="icon verde" icon="icons:check"></iron-icon>
+            </paper-chip>
+            
+            <paper-chip label="Desenvolvimento de Sistemas Multiplataforma (SPA - Progressive Web App)" deletable>
+              <iron-icon class="icon verde" icon="icons:check"></iron-icon>
+            </paper-chip>
+
+            <paper-chip label="Desenvolvimento de Aplicativos (Hibrido - Cordova)" deletable>
+              <iron-icon class="icon verde" icon="icons:check"></iron-icon>
+            </paper-chip>
+
+            <paper-chip label="Criação e configuração de Clouding Computer (Amazon s2, Rota 53)" deletable>
+              <iron-icon class="icon verde" icon="icons:check"></iron-icon>
+            </paper-chip>
+            
+            <paper-chip label="Instalação de configuração do Ambiente de Produção" deletable>
+              <iron-icon class="icon verde" icon="icons:check"></iron-icon>
+            </paper-chip>
+
+            <paper-chip label="Montagem e suporte do DHTML / Responsivo" deletable>
+              <iron-icon class="icon verde" icon="icons:check"></iron-icon>
+            </paper-chip>
+
+            <paper-chip label="Criaçao do Design e interaçao do protótipo funcional" deletable>
+              <iron-icon class="icon verde" icon="icons:check"></iron-icon>
+            </paper-chip>
+
+            <paper-chip label="Monitoramento e Refinamento do CEO" deletable>
+              <iron-icon class="icon verde" icon="icons:check"></iron-icon>
+            </paper-chip>
+
+            <paper-chip label="Documentação especifica e funcional" deletable>
+              <iron-icon class="icon verde" icon="icons:check"></iron-icon>
+            </paper-chip>
+          </div>
+        </paper-card>
+
       </div>
   </template>
 
