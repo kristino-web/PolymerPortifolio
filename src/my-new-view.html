@@ -10,7 +10,7 @@
 
         padding: 16px;
       }
-      iron-icon{
+      .iconPersonalizado{
         color: #4285f4;
         height: 46px;
         width: 63px;
@@ -20,19 +20,22 @@
     </style>
 
     <div class="card">
-      <h1><iron-icon icon="communication:call"></iron-icon> CONTATO</h1>
+      <h1><iron-icon class="iconPersonalizado" icon="communication:call"></iron-icon> CONTATO</h1>
       
-      <paper-icon-button icon="meu-svg-icons:shape" drawer-toggle></paper-icon-button>
-      
-<!-- <paper-button class="pink">link</paper-button>
-<paper-button raised class="indigo">raised</paper-button>
-<paper-button toggles raised class="green">toggles</paper-button>
-<paper-button disabled class="disabled">disabled</paper-button> -->
-      
-      
+      <div class="horizontal">
+      <paper-card heading="Entre em contato " class="" alt="Emmental" style="width: 100%;">
+        <div class="card-content">
+          <div class="esquerda">
+            <iron-icon icon="communication:phonelink-ring" class=""> </iron-icon> (19)97125-9603
+            <br><br>
+            <iron-icon icon="communication:contact-mail" class=""> </iron-icon> tino477@gmail.com
+          </div>
+        </div>
+        <div class="card-actions">
+        </div>
+      </paper-card>
 
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+    </div>
     </div>
   </template>
   <!-- Creates the element's prototype and registers it -->
